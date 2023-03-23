@@ -6,9 +6,9 @@ using namespace std;
 int main(){
 
     bool quite = false;
-    int option, findSub, fstring, dIndex, Pos;
+    int option, findSub, dIndex;
     vector <string> words ;
-    string addWord, substring, findString, strPos;
+    string addWord, substring, findString;
 
     do{
         cout << "UFxC String Store V.0" << endl << endl
