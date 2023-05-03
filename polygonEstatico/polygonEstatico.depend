@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1683109865 source:c:\users\alice\onedrive\documentos\prog ii\polygonestatico\point2d.cpp
+	"point2D.hpp"
+
+1683109865 c:\users\alice\onedrive\documentos\prog ii\polygonestatico\point2d.hpp
+	<iostream>
+
+1683109865 source:c:\users\alice\onedrive\documentos\prog ii\polygonestatico\polygon.cpp
+	"polygon.hpp"
+	<cmath>
+
+1683109865 c:\users\alice\onedrive\documentos\prog ii\polygonestatico\polygon.hpp
+	"point2D.hpp"
+	<vector>
+
+1683109903 source:c:\users\alice\onedrive\documentos\prog ii\polygonestatico\main.cpp
+	"polygon.hpp"
+
