@@ -1,19 +1,19 @@
 # depslib dependency file v1.0
-1683073760 source:c:\users\alice\onedrive\documentos\prog ii\polygon\main.cpp
+1683234317 source:c:\users\alice\onedrive\documentos\prog ii\polygon\main.cpp
 	"polygon.hpp"
 	<fstream>
 
-1683073660 c:\users\alice\onedrive\documentos\prog ii\polygon\polygon.hpp
+1683233729 c:\users\alice\onedrive\documentos\prog ii\polygon\polygon.hpp
 	"point2D.hpp"
 	<vector>
 
-1683073130 c:\users\alice\onedrive\documentos\prog ii\polygon\point2d.hpp
+1683217671 c:\users\alice\onedrive\documentos\prog ii\polygon\point2d.hpp
 	<iostream>
 
-1683073180 source:c:\users\alice\onedrive\documentos\prog ii\polygon\point2d.cpp
+1683224320 source:c:\users\alice\onedrive\documentos\prog ii\polygon\point2d.cpp
 	"point2D.hpp"
 
-1683073744 source:c:\users\alice\onedrive\documentos\prog ii\polygon\polygon.cpp
+1683234772 source:c:\users\alice\onedrive\documentos\prog ii\polygon\polygon.cpp
 	"polygon.hpp"
 	<cmath>
 
