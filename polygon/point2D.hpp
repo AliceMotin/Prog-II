@@ -12,8 +12,7 @@ public:
     Point2D(int x, int y);
     ~Point2D();
 
-    void SetX(int x);
-    void SetY(int y);
+    void SetXY(int x, int y);
     int GetX();
     int GetY();
 };
