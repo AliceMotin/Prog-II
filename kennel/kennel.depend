@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1686347059 source:c:\users\alice\onedrive\documentos\prog ii\kennel\cat.cpp
+	"cat.hpp"
+	<iostream>
+
+1686345507 source:c:\users\alice\onedrive\documentos\prog ii\kennel\dog.cpp
+	"dog.hpp"
+	<iostream>
+
+1686345261 source:c:\users\alice\onedrive\documentos\prog ii\kennel\pet.cpp
+	"pet.hpp"
+
+1685979091 source:c:\users\alice\onedrive\documentos\prog ii\kennel\petshop.cpp
+	"petShop.hpp"
+
+1685993567 c:\users\alice\onedrive\documentos\prog ii\kennel\petshop.hpp
+	<iostream>
+	<string>
+	<vector>
+	"pet.hpp"
+
+1686345261 c:\users\alice\onedrive\documentos\prog ii\kennel\pet.hpp
+	<iostream>
+	<string>
+
+1686347414 source:c:\users\alice\onedrive\documentos\prog ii\kennel\main.cpp
+	<iostream>
+	<string>
+	"kennel.hpp"
+	"pet.hpp"
+	"dog.hpp"
+	"cat.hpp"
+
+1686347505 c:\users\alice\onedrive\documentos\prog ii\kennel\dog.hpp
+	"pet.hpp"
+
+1686347505 c:\users\alice\onedrive\documentos\prog ii\kennel\cat.hpp
+	"pet.hpp"
+
+1686347313 source:c:\users\alice\onedrive\documentos\prog ii\kennel\kennel.cpp
+	"kennel.hpp"
+
+1686347414 c:\users\alice\onedrive\documentos\prog ii\kennel\kennel.hpp
+	"pet.hpp"
+	"dog.hpp"
+	"cat.hpp"
+
