@@ -4,7 +4,7 @@
 Pet::Pet(const string& name, int age): name(name), age(age) {}
 
 //Destrutor da classe pet
-Pet::~Pet() {}
+Pet::~Pet(){}
 
 int Pet::getAge() const{
     return age;
