@@ -5,6 +5,8 @@
 //Construtor da classe Cat
 Cat::Cat(const string& name, int age, const string& color): Pet(name, age), color(color) {}
 
+Cat::~Cat(){}
+
 void Cat::printDetails()const{
     cout << "Cat: " << name << " (" << color << "), " << age << " years old" << endl;
 }

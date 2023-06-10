@@ -47,7 +47,7 @@ int main() {
     delete cat1;
     delete dog2;
     delete cat2;
-    kennel.~Kennel();
+    //kennel.~Kennel();
 
     return 0;
 }

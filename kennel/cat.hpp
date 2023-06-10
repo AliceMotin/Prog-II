@@ -11,6 +11,8 @@ public:
     //Construtor da classe Cat
     Cat(const string& name, int age, const string& color);
 
+    virtual ~Cat();
+
     //Implementação do método printDetails para gatos
     void printDetails() const override;
     bool isGray() const;

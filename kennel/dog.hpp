@@ -11,6 +11,8 @@ public:
     //Construtor da classe Dog
     Dog(const string& name, int age, const string& breed);
 
+    virtual ~Dog();
+
     //Implementação do método printDetails para cães
     void printDetails() const override;
     bool isLabrador() const;

@@ -5,6 +5,8 @@
 //Construtor da classe Dog
 Dog::Dog(const string& name, int age, const string& breed): Pet(name, age), breed(breed) {}
 
+Dog::~Dog(){}
+
 void Dog::printDetails() const{
     cout << "Dog: " << name << " (" << breed << "), " << age << " years old" << endl;
 }
