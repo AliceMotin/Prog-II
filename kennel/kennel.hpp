@@ -19,7 +19,7 @@ public:
     Kennel(int capacity);
 
     // Destrutor do PetShop
-    virtual ~Kennel();
+    ~Kennel();
 
     // Adiciona um animal de estimação ao pet shop
     void addPet(Pet* pet);

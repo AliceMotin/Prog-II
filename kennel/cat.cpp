@@ -18,3 +18,11 @@ bool Cat::isGray() const{
     else
         return false;
 }
+
+bool Cat::isCat() const{
+    return true;
+}
+
+bool Cat::isDog() const{
+    return false;
+}

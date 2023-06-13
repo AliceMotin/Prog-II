@@ -16,6 +16,8 @@ public:
     //Implementação do método printDetails para cães
     void printDetails() const override;
     bool isLabrador() const;
+    bool isCat() const;
+    bool isDog() const;
 };
 
 #endif // DOG_HPP_INCLUDED

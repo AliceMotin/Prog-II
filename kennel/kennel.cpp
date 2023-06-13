@@ -6,10 +6,15 @@ Kennel::Kennel(int capacity): capacity(capacity), count(0) {
 
 Kennel::~Kennel(){
     for (int i = 0; i < count; i++) {
-            delete pets[i]; // Deleta cada animal de estimação
+        if (pets[i]->isCat()) {
+            Cat* cat = static_cast<Cat*>(pets[i]);
+            delete cat;
+        } else {
+            Dog* dog = static_cast<Dog*>(pets[i]);
+            delete dog;
+        }
     }
-    delete[] pets; // Deleta o array de ponteiros
-
+    delete[] pets;
 }
 
 void Kennel::addPet(Pet* pet){
@@ -58,10 +63,12 @@ int Kennel::operator&&(const string& breed) const{
     int countSameBreed = 0;
 
     for (int i = 0; i < count; i++) {
-        Dog* dog = dynamic_cast<Dog*>(pets[i]);
-           if (dog != nullptr && dog->isLabrador()) {
+        if (pets[i]->isDog()) {
+            Dog* dog = static_cast<Dog*>(pets[i]);
+            if (dog->isLabrador()) {
                 countSameBreed++;
             }
+        }
 
     }
 
@@ -72,11 +79,12 @@ int Kennel::operator==(const string& color) const{
     int countGray = 0;
 
     for (int i = 0; i < count; i++) {
-        Cat* cat = dynamic_cast<Cat*>(pets[i]);
-           if (cat != nullptr && cat->isGray()) {
+        if (pets[i]->isCat()) {
+            Cat* cat = static_cast<Cat*>(pets[i]);
+            if (cat->isGray()) {
                 countGray++;
             }
-
+        }
     }
 
     return countGray;

@@ -16,6 +16,8 @@ public:
     //Implementação do método printDetails para gatos
     void printDetails() const override;
     bool isGray() const;
+    bool isCat() const;
+    bool isDog() const;
 };
 
 #endif // CAT_HPP_INCLUDED
