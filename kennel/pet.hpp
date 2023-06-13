@@ -17,9 +17,10 @@ public:
 
     //Destrutor virtual para permitir polimorfismo
     virtual ~Pet();
-
+    //~Pet();
     //Método virtual puro para imprimir os detalhes do animal de estimação
     virtual void printDetails() const = 0;
+    //void printDetails() const = 0;
 
     int getAge() const;
     string getName() const;

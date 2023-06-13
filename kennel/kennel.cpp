@@ -1,7 +1,6 @@
 #include "kennel.hpp"
 
-Kennel::Kennel(int capacity)
-    : capacity(capacity), count(0) {
+Kennel::Kennel(int capacity): capacity(capacity), count(0) {
     pets = new Pet*[capacity]; // Alocação dinâmica de memória para o array de animais de estimação
     }
 
@@ -56,17 +55,17 @@ int Kennel::operator+(const string& name) const {
 }
 
 int Kennel::operator&&(const string& breed) const{
-    int countSameBreeze = 0;
+    int countSameBreed = 0;
 
     for (int i = 0; i < count; i++) {
         Dog* dog = dynamic_cast<Dog*>(pets[i]);
            if (dog != nullptr && dog->isLabrador()) {
-                countSameBreeze++;
+                countSameBreed++;
             }
 
     }
 
-    return countSameBreeze;
+    return countSameBreed;
 }
 
 int Kennel::operator==(const string& color) const{
