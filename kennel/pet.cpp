@@ -14,10 +14,10 @@ string Pet::getName() const{
     return name;
 }
 
-bool Pet::isCat() const{
-    return false;
-}
+//bool Pet::isCat() const{
+  //  return false;
+//}
 
-bool Pet::isDog() const{
-    return false;
-}
+//bool Pet::isDog() const{
+  //  return false;
+//}

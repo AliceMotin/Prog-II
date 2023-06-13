@@ -24,8 +24,8 @@ public:
 
     int getAge() const;
     string getName() const;
-    virtual bool isCat() const;
-    virtual bool isDog() const;
+    //virtual bool isCat() const;
+    //virtual bool isDog() const;
 
 };
 

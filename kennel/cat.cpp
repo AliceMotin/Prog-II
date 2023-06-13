@@ -19,10 +19,10 @@ bool Cat::isGray() const{
         return false;
 }
 
-bool Cat::isCat() const{
-    return true;
-}
+//bool Cat::isCat() const{
+  //  return true;
+//}
 
-bool Cat::isDog() const{
-    return false;
-}
+//bool Cat::isDog() const{
+  //  return false;
+//}

@@ -19,10 +19,10 @@ bool Dog::isLabrador() const{
         return false;
 }
 
-bool Dog::isCat() const{
-    return false;
-}
+//bool Dog::isCat() const{
+   // return false;
+//}
 
-bool Dog::isDog() const{
-    return true;
-}
+//bool Dog::isDog() const{
+  //  return true;
+//}
