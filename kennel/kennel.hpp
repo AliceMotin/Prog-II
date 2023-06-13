@@ -26,7 +26,7 @@ public:
 
     // Imprime os detalhes de todos os animais de estimação no pet shop
     void printPetDetails() const;
-    int operator-(const Kennel& kennel) const;
+    int operator-(const Kennel& other) const;
     int operator++() const;
     int operator+(const string& name) const;
     int operator&&(const string& breed) const;

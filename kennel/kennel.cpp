@@ -1,20 +1,9 @@
 #include "kennel.hpp"
 
-Kennel::Kennel(int capacity): capacity(capacity), count(0) {
-    pets = new Pet*[capacity]; // Alocação dinâmica de memória para o array de animais de estimação
-    }
+Kennel::Kennel() : pets(nullptr), capacity(0), count(0) {}
 
-Kennel::~Kennel(){
-    if (pets != nullptr) {
-        for (int i = 0; i < count; i++) {
-            if (pets[i] != nullptr) {
-                delete pets[i]; // Deleta cada animal de estimação
-                pets[i] = nullptr; // Define o ponteiro como nullptr para evitar problemas de duplicação de exclusão
-            }
-        }
-        delete[] pets; // Deleta o array de ponteiros
-        pets = nullptr; // Define o ponteiro como nullptr para evitar problemas de duplicação de exclusão
-    }
+Kennel::Kennel(int capacity): pets(nullptr), capacity(capacity), count(0) {
+    pets = new Pet*[capacity]; // Alocação dinâmica de memória para o array de animais de estimação
 
 }
 
@@ -25,15 +14,36 @@ void Kennel::addPet(Pet* pet){
     }
 }
 
+Kennel::~Kennel(){
+    for (int i = 0; i < count; i++) {
+        if (pets[i] != nullptr) {
+            if (pets[i]->isCat()) {
+                Cat* cat = static_cast<Cat*>(pets[i]);
+                delete cat;
+
+            } else {
+                Dog* dog = static_cast<Dog*>(pets[i]);
+                delete dog;
+
+            }
+            pets[i] = nullptr;
+        }
+    }
+    delete[] pets;
+}
+
 void Kennel::printPetDetails()const{
     cout << "Kennel Inventory:" << endl;
+
     for (int i = 0; i < count; i++) {
-        pets[i]->printDetails();
+        if (pets[i] != nullptr){
+            pets[i]->printDetails();
+        }
     }
 }
 
-int Kennel::operator-(const Kennel& kennel) const {
-    return capacity - kennel.count; // Retorna a diferença entre a capacidade total e a quantidade de animais no pet shop passado como parâmetro
+int Kennel::operator-(const Kennel& other) const {
+    return capacity - other.count; // Retorna a diferença entre a capacidade total e a quantidade de animais no pet shop passado como parâmetro
 }
 
 int Kennel::operator++() const {
@@ -64,10 +74,12 @@ int Kennel::operator&&(const string& breed) const{
     int countSameBreed = 0;
 
     for (int i = 0; i < count; i++) {
-        Dog* dog = dynamic_cast<Dog*>(pets[i]);
-            if (dog != nullptr && dog->isLabrador()) {
+        if (pets[i]->isDog()) {
+            Dog* dog = static_cast<Dog*>(pets[i]);
+            if (dog->isLabrador()) {
                 countSameBreed++;
             }
+        }
     }
 
     return countSameBreed;
@@ -77,10 +89,12 @@ int Kennel::operator==(const string& color) const{
     int countGray = 0;
 
     for (int i = 0; i < count; i++) {
-        Cat* cat = dynamic_cast<Cat*>(pets[i]);
-            if (cat != nullptr && cat->isGray()) {
-                countGray++;
+        if (pets[i]->isCat()) {
+            Cat* cat = static_cast<Cat*>(pets[i]);
+            if (cat->isGray()) {
+               countGray++;
             }
+        }
     }
 
     return countGray;

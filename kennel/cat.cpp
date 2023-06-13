@@ -1,9 +1,8 @@
 #include "cat.hpp"
 #include <iostream>
 
-
 //Construtor da classe Cat
-Cat::Cat(const string& name, int age, const string& color): Pet(name, age), color(color) {}
+//Cat::Cat(const string& name, int age, const string& color): Pet(name, age), color(color) {}
 
 Cat::~Cat(){}
 
@@ -19,10 +18,10 @@ bool Cat::isGray() const{
         return false;
 }
 
-//bool Cat::isCat() const{
-  //  return true;
-//}
+bool Cat::isCat() const{
+    return true;
+}
 
-//bool Cat::isDog() const{
-  //  return false;
-//}
+bool Cat::isDog() const{
+    return false;
+}

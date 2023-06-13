@@ -13,7 +13,7 @@ protected:
 
 public:
     //Construtor da classe Pet
-    Pet(const string& name, int age);
+    Pet(const string& _name, int _age): name(_name), age(_age){};
 
     //Destrutor virtual para permitir polimorfismo
     virtual ~Pet();
@@ -24,8 +24,8 @@ public:
 
     int getAge() const;
     string getName() const;
-    //virtual bool isCat() const;
-    //virtual bool isDog() const;
+    virtual bool isCat() const;
+    virtual bool isDog() const;
 
 };
 
