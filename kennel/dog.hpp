@@ -9,15 +9,15 @@ protected:
 
 public:
     //Construtor da classe Dog
-    Dog(const string& _name, int _age, const string& _breed): Pet(_name, _age), breed(_breed){};
+    Dog(const string& _name, int _age, const string& _breed);
 
     virtual ~Dog();
 
     //Implementação do método printDetails para cães
     void printDetails() const override;
-    bool isLabrador() const;
-    bool isCat() const;
-    bool isDog() const;
+    bool isLabrador();
+    bool isCat() override;
+    bool isDog() override;
 };
 
 #endif // DOG_HPP_INCLUDED

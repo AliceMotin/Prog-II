@@ -1,16 +1,16 @@
 #include "dog.hpp"
-#include <iostream>
 
-//Construtor da classe Dog
-//Dog::Dog(const string& name, int age, const string& breed): Pet(name, age), breed(breed) {}
+//Construtor da classe dog
+Dog::Dog(const string& _name, int _age, const string& _breed): Pet(_name, _age), breed(_breed) {}
 
+//Destrutor da classe dog
 Dog::~Dog(){}
 
 void Dog::printDetails() const{
     cout << "Dog: " << name << " (" << breed << "), " << age << " years old" << endl;
 }
 
-bool Dog::isLabrador() const{
+bool Dog::isLabrador(){
     if(breed == "Labrador"){
         return true;
     }
@@ -18,10 +18,10 @@ bool Dog::isLabrador() const{
         return false;
 }
 
-bool Dog::isCat() const{
+bool Dog::isCat(){
     return false;
 }
 
-bool Dog::isDog() const{
+bool Dog::isDog(){
     return true;
 }

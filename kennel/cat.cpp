@@ -1,16 +1,16 @@
 #include "cat.hpp"
-#include <iostream>
 
-//Construtor da classe Cat
-//Cat::Cat(const string& name, int age, const string& color): Pet(name, age), color(color) {}
+//Construtor da classe cat
+Cat::Cat(const string& _name, int _age, const string& _color): Pet(_name, _age), color(_color) {}
 
+//Destrutor da classe cat
 Cat::~Cat(){}
 
 void Cat::printDetails()const{
     cout << "Cat: " << name << " (" << color << "), " << age << " years old" << endl;
 }
 
-bool Cat::isGray() const{
+bool Cat::isGray(){
     if(color == "Gray"){
         return true;
     }
@@ -18,10 +18,10 @@ bool Cat::isGray() const{
         return false;
 }
 
-bool Cat::isCat() const{
+bool Cat::isCat(){
     return true;
 }
 
-bool Cat::isDog() const{
+bool Cat::isDog(){
     return false;
 }

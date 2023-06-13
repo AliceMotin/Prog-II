@@ -5,32 +5,34 @@
 #include "cat.hpp"
 
 
-// Classe PetShop para gerenciar os animais de estimação no pet shop
+// Classe kennel para gerenciar os animais de estimação no canil
 class Kennel {
 private:
     Pet** pets; // Array de ponteiros para animais de estimação
     int capacity; // Capacidade máxima do pet shop
-    int count; // Contador de animais de estimação atualmente no pet shop
+    int count; // Contador de animais de estimação atualmente no canil
 
 public:
 
     Kennel();
-    // Construtor do PetShop
+    // Construtor do kennel
     Kennel(int capacity);
 
-    // Destrutor do PetShop
+    // Destrutor do kennel
     ~Kennel();
 
-    // Adiciona um animal de estimação ao pet shop
+    // Adiciona um animal de estimação ao kennel
     void addPet(Pet* pet);
 
-    // Imprime os detalhes de todos os animais de estimação no pet shop
-    void printPetDetails() const;
-    int operator-(const Kennel& other) const;
-    int operator++() const;
-    int operator+(const string& name) const;
-    int operator&&(const string& breed) const;
-    int operator==(const string& color) const;
+    // Imprime os detalhes de todos os animais de estimação no kennel
+    void printPetDetails();
+
+    //métodos operadores
+    int operator-(const Kennel& other);
+    int operator++();
+    int operator+(const string& name);
+    int operator&&(const string& breed);
+    int operator==(const string& color);
 
 };
 

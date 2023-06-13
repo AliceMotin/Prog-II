@@ -5,7 +5,7 @@
 
 using namespace std;
 
-//Classe base abstrata para animais de estimação
+//Classe base para animais de estimação
 class Pet {
 protected:
     string name;
@@ -13,19 +13,18 @@ protected:
 
 public:
     //Construtor da classe Pet
-    Pet(const string& _name, int _age): name(_name), age(_age){};
+    Pet(const string& _name, int _age);
 
     //Destrutor virtual para permitir polimorfismo
     virtual ~Pet();
-    //~Pet();
-    //Método virtual puro para imprimir os detalhes do animal de estimação
-    virtual void printDetails() const = 0;
-    //void printDetails() const = 0;
 
-    int getAge() const;
-    string getName() const;
-    virtual bool isCat() const;
-    virtual bool isDog() const;
+    //Método virtual puro para imprimir os detalhes do animal de estimação
+    virtual void printDetails() const=0;
+
+    int getAge();
+    string getName();
+    virtual bool isCat();
+    virtual bool isDog();
 
 };
 

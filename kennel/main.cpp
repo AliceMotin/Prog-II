@@ -1,9 +1,14 @@
-#include <iostream>
-#include <string>
+/*
+
+Trabalho III
+
+Disciplina: Linguagem de Programação II
+Estudante: Alice Motin Bastos
+Matrícula: 22201175
+
+*/
+
 #include "kennel.hpp"
-#include "pet.hpp"
-#include "dog.hpp"
-#include "cat.hpp"
 
 using namespace std;
 
@@ -15,8 +20,8 @@ int main() {
     //Cria objetos Dog e Cat
     Dog* dog1 = new Dog("Lola", 3, "Labrador");
     Cat* cat1 = new Cat("Lola", 5, "Gray");
-    Dog* dog2 = new Dog("Max", 2, "Golden Retriever");
-    Cat* cat2 = new Cat("Lola", 10, "Gray");
+    Dog* dog2 = new Dog("Mimi", 2, "Golden Retriever");
+    Cat* cat2 = new Cat("Lupita", 10, "Black");
 
     //Adiciona animais ao canil
     kennel.addPet(dog1);
@@ -28,7 +33,7 @@ int main() {
     kennel.printPetDetails();
 
     int printLimit = kennel - kennel;
-    cout << "Number of animals left to reach the limit:" << printLimit << endl;
+    cout << endl << "Number of animals left to reach the limit:" << printLimit << endl;
 
     int printElderly = ++kennel;
     cout << "Number of elderly animals:" << printElderly << endl;
